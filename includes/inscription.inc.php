@@ -2,9 +2,11 @@
 if(isset($_POST["frmInscription"]))
 {
     //echo "Je viens du formulaire";
-    $nom = htmlentities($_POST['nom']);
-    $prenom = htmlentities($_POST['prenom']);
-    $mail = htmlentities($_POST['mail']);
+    $nom = htmlentities(trim($_POST['nom']));
+    $prenom = htmlentities(trim($_POST['prenom']));
+    $mail = htmlentities(trim($_POST['mail']));
+    $password = htmlentities(trim($_POST['password']));
+    $confirmPassword = htmlentities(trim($_POST['confirmPassword']));
 
     $erreurs = array();
 
@@ -16,7 +18,6 @@ if(isset($_POST["frmInscription"]))
     array_push($erreurs, "Il manque votre prenom");
 
 
-
     if(mb_strlen($mail) === 0 )
     {
         array_push($erreurs, "Il manque votre e-mail");
@@ -25,6 +26,18 @@ if(isset($_POST["frmInscription"]))
         # code...
         array_push($erreurs, "e-mail invalide");
     }
+
+    if(mb_strlen($password) === 0)
+    {
+        array_push($erreurs, "Il manque votre mot de passe");
+    }
+    elseif (mb_strlen($password) === 0 || $confirmPassword !== $password) 
+    {
+        # code...
+        array_push($erreurs, "Vos mots de passes ne sont pas identique");
+    }
+
+    
  
 
     if(count($erreurs))
@@ -44,13 +57,16 @@ if(isset($_POST["frmInscription"]))
     else{
         $serverName = "localhost";
         $userName = "root";
-        $userPassword = "your_password";
+        $userPassword = "";
         $database = "filrouge";
 
         try {
             //code...
-            $connexion = new PDO("mysql:host$serverName;dbname:$database,$userName,$userPassword");
-            dump($connexion);
+            $connexion = new PDO("mysql:host=$serverName;dbname=$database", $userName, $userPassword);
+            $connexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+            $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+            $requete = "INSERT INTO utilisateurs (id_utilisateur,nom,prenom,mail,password) VALUES (NULL,'$nom','$prenom','$mail','$passwordHash' );";
+            $connexion->exec($requete);
 
         } catch (PDOException $e) {
             die("Erreur : ".$e->getMessage() );

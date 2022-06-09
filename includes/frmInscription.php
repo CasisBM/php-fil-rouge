@@ -18,6 +18,10 @@
         <input type="password" name="password" id="password" />
     </div>
     <div>
+        <label for="confirmPassword">Confirmer le mot de passe :</label>
+        <input type="password" name="confirmPassword" id="confirmPassword" />
+    </div>
+    <div>
         <input type="reset" value="Effacer"/>
         <input type="submit" value="Envoyer"/>
     </div>

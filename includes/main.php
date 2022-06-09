@@ -1,5 +1,5 @@
 <?php
-include './functions/loadFunction.php'; 
+
 require_once './includes/nav.php';
 /* include './functions/dump.php';
 include './functions/inclusionIncFile.php'; */
@@ -7,7 +7,7 @@ include './functions/inclusionIncFile.php'; */
 <main>
 
     <?php
-    loadFunction();
+
 /*     if (isset($_GET['page']))
         $page = $_GET['page'];
 

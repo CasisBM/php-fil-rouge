@@ -1,15 +1,14 @@
 
 <?php
-function inclusionIncFile($default){
+function inclusionIncFile($defaultPage){
     $files = glob('./includes/*.inc.php');
-    $page = isset($_GET['page']) ? $_GET['page'] : "accueil";
-    echo $page;
-    var_dump($files);
-    if (in_array($page,$files)) 
+    $page = $_GET['page'] ?? $defaultPage;
+    $pageTest = './includes/' . $page . '.inc.php';
+    if (in_array($pageTest,$files)) 
         require "./includes/$page.inc.php";
     
     else
-    require "./includes/$default.inc.php";
+    require "./includes/$defaultPage.inc.php";
 
 }
 

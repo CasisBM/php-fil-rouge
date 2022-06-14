@@ -33,6 +33,11 @@ if(isset($_POST["frmLogin"]))
         echo $messageErreur;
         include './includes/frmLogin.php';
     }
+    else
+    {
+        $_SESSION['loginUser'] = $mail;
+        header('Location: index.php?page=accueil');
+    }
 
 }
 else{

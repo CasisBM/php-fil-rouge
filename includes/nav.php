@@ -1,5 +1,6 @@
 <?php 
-!isset($_SESSION['loginUser']) ?: var_dump($_SESSION);
+if(isset($_SESSION['loginUser']))
+    echo $_SESSION['loginUser'];
 ?>
 <header>
     <nav>

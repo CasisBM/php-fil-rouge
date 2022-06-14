@@ -36,7 +36,7 @@ if(isset($_POST["frmLogin"]))
     else
     {
         $_SESSION['loginUser'] = $mail;
-        echo "tout va bien";
+        header('Location: index.php?page=accueil');
     }
 
 }

@@ -6,11 +6,11 @@
     private $database = "filrouge";
     private $connexion;
     
-    public function __construct(string $serverName,$userName,$userPassword,$database)
+    public function __construct()
     {
         try {
             //code...
-            $this->connexion = new PDO("mysql:host=$serverName;dbname=$database", $userName, $userPassword);
+            $this->connexion = new PDO("mysql:host=$this->serverName;dbname=$this->database", $this->userName, $this->userPassword);
             $this->connexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
         } catch (PDOException $e) {
@@ -21,6 +21,11 @@
     public function inserer($requete)
     {
         $this->connexion->exec($requete);
+    }
+
+    public function select($requete)
+    {
+        return $this->connexion->query($requete)->fetchAll();
     }
 
     public function __destruct()

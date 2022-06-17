@@ -55,22 +55,13 @@ if(isset($_POST["frmInscription"]))
         include './includes/frmInscription.php';
     }
     else{
-        $serverName = "localhost";
-        $userName = "root";
-        $userPassword = "";
-        $database = "filrouge";
 
-        try {
-            //code...
-            $connexion = new PDO("mysql:host=$serverName;dbname=$database", $userName, $userPassword);
-            $connexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
             $passwordHash = password_hash($password, PASSWORD_DEFAULT);
             $requete = "INSERT INTO utilisateurs (id_utilisateur,nom,prenom,mail,password) VALUES (NULL,'$nom','$prenom','$mail','$passwordHash' );";
-            $connexion->exec($requete);
 
-        } catch (PDOException $e) {
-            die("Erreur : ".$e->getMessage() );
-        }
+            $queryInsert = new Sql();
+            $queryInsert->inserer($requete);
+
     }
 
 }

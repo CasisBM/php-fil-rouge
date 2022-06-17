@@ -41,6 +41,8 @@ if(isset($_POST["frmLogin"]))
         $messageEmail = 'Vous êtes bien connecté';
 
         $mail = new Mail($toEmail,$fromEmail,$sujetEmail,$messageEmail);
+        $_SESSION['loginUser'] = $mail;
+        header('Location: index.php?page=accueil');
     }
 
 }

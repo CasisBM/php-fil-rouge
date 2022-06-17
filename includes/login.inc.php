@@ -40,7 +40,9 @@ if(isset($_POST["frmLogin"]))
         $sujetEmail = 'Login Success';
         $messageEmail = 'Vous êtes bien connecté';
 
-        $mail = new Mail($toEmail,$fromEmail,$sujetEmail,$messageEmail);
+        sendMail($toEmail,$fromEmail,$sujetEmail,$messageEmail);
+
+        //$mail = new Mail($toEmail,$fromEmail,$sujetEmail,$messageEmail);
         $_SESSION['loginUser'] = $mail;
         header('Location: index.php?page=accueil');
     }

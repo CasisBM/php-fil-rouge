@@ -33,6 +33,15 @@ if(isset($_POST["frmLogin"]))
         echo $messageErreur;
         include './includes/frmLogin.php';
     }
+    else
+    {
+        $toEmail = 'to@to.to';
+        $fromEmail = 'from@from.from';
+        $sujetEmail = 'Login Success';
+        $messageEmail = 'Vous êtes bien connecté';
+
+        $mail = new Mail($toEmail,$fromEmail,$sujetEmail,$messageEmail);
+    }
 
 }
 else{

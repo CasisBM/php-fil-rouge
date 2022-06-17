@@ -55,10 +55,6 @@ if(isset($_POST["frmInscription"]))
         include './includes/frmInscription.php';
     }
     else{
-        $serverName = "localhost";
-        $userName = "root";
-        $userPassword = "";
-        $database = "filrouge";
 
             $passwordHash = password_hash($password, PASSWORD_DEFAULT);
             $requete = "INSERT INTO utilisateurs (id_utilisateur,nom,prenom,mail,password) VALUES (NULL,'$nom','$prenom','$mail','$passwordHash' );";

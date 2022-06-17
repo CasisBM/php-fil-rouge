@@ -16,6 +16,8 @@ if(isset($_SESSION['loginUser']))
             <li 
             <?php echo !isset($_SESSION['loginUser']) ? "hidden" : "" ?>
             ><a href="index.php?page=logout"  >Logout</a></li>
+            <li><a href="index.php?page=admin"><i class="fa-solid fa-user"></i></a></li>
         </ul>
+        
     </nav>
 </header>

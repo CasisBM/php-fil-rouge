@@ -23,6 +23,11 @@
         $this->connexion->exec($requete);
     }
 
+    public function select($requete)
+    {
+        return $this->connexion->query($requete)->fetchAll();
+    }
+
     public function __destruct()
     {
         $this->connexion = null;

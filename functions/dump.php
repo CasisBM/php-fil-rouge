@@ -1,7 +1,7 @@
 <?php
 
-function dump($var){
+function dump($var,$methode="var_dump"){
     echo "<pre>";
-    var_dump($var);
+    $methode($var);
     echo "</pre>";
 }

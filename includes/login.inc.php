@@ -1,4 +1,5 @@
 <?php 
+
 if(isset($_POST["frmLogin"]))
 {
     //echo "Je viens du formulaire";
@@ -35,6 +36,14 @@ if(isset($_POST["frmLogin"]))
     }
     else
     {
+        dump($_SERVER['HTTP_ORIGIN'].dirname($_SERVER['REQUEST_URI']));
+        //$requeteLogin="SELECT password FROM utilisateurs WHERE mail ='".$mail."'";
+        //dump($requeteLogin);
+        //$sqlLogin = new Sql();
+        //$resultatLogin = $sqlLogin->showTable($requeteLogin);
+
+        dump($resultatLogin);
+
         $toEmail = 'to@to.to';
         $fromEmail = 'from@from.from';
         $sujetEmail = 'Login Success';
@@ -44,7 +53,7 @@ if(isset($_POST["frmLogin"]))
 
         //$mail = new Mail($toEmail,$fromEmail,$sujetEmail,$messageEmail);
         $_SESSION['loginUser'] = $mail;
-        header('Location: index.php?page=accueil');
+
     }
 
 }

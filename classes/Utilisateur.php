@@ -63,7 +63,7 @@ class Utilisateur implements interfaceUtilisateur
 
         
         $passwordHash = password_hash($this->password, PASSWORD_DEFAULT);
-        $requete = "INSET INTO utilisateurs (nom,prenom,mail,password) VALUES ('$this->nom','$this->prenom','$this->mail','$passwordHash' );";
+        $requete = "INSERT INTO utilisateurs (nom,prenom,mail,password) VALUES ('$this->nom','$this->prenom','$this->mail','$passwordHash' );";
         $this->db->inserer($requete);
 
     }
@@ -96,9 +96,10 @@ class Utilisateur implements interfaceUtilisateur
                 return false;
             }
         }
-        
+
         return false;
     }
+
     public function deconncterUtilisateur()
     {
 

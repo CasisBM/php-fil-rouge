@@ -20,7 +20,15 @@
 
     public function inserer($requete)
     {
-        $this->connexion->exec($requete);
+        try {
+            $this->connexion->exec($requete);
+        }
+        catch(Exception $e) {
+            $myfile = fopen("errorSql.txt", "a") or die("Unable to open file!");
+            $txt = $e."\n";
+            fwrite($myfile, $txt);
+            fclose($myfile);
+        }    
     }
 
     public function select($requete)

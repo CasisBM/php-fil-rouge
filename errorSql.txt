@@ -1,0 +1,45 @@
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSET INTO utilisateurs (nom,prenom,mail,password) VALUES ('JORDAN','Michael'...' at line 1 in C:\xampp\htdocs\php-fil-rouge\classes\Sql.php:24
+Stack trace:
+#0 C:\xampp\htdocs\php-fil-rouge\classes\Sql.php(24): PDO->exec('INSET INTO util...')
+#1 C:\xampp\htdocs\php-fil-rouge\classes\Utilisateur.php(67): Sql->inserer('INSET INTO util...')
+#2 C:\xampp\htdocs\php-fil-rouge\includes\inscription.inc.php(59): Utilisateur->inscrireUtilisateur()
+#3 C:\xampp\htdocs\php-fil-rouge\functions\inclusionIncFile.php(8): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php-fil-rouge\includes\main.php(34): inclusionIncFile('accueil')
+#5 C:\xampp\htdocs\php-fil-rouge\index.php(13): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSET INTO utilisateurs (nom,prenom,mail,password) VALUES ('JORDAN','Michael'...' at line 1 in C:\xampp\htdocs\php-fil-rouge\classes\Sql.php:24
+Stack trace:
+#0 C:\xampp\htdocs\php-fil-rouge\classes\Sql.php(24): PDO->exec('INSET INTO util...')
+#1 C:\xampp\htdocs\php-fil-rouge\classes\Utilisateur.php(67): Sql->inserer('INSET INTO util...')
+#2 C:\xampp\htdocs\php-fil-rouge\includes\inscription.inc.php(59): Utilisateur->inscrireUtilisateur()
+#3 C:\xampp\htdocs\php-fil-rouge\functions\inclusionIncFile.php(8): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php-fil-rouge\includes\main.php(34): inclusionIncFile('accueil')
+#5 C:\xampp\htdocs\php-fil-rouge\index.php(13): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSET INTO utilisateurs (nom,prenom,mail,password) VALUES ('JORDAN','Michael'...' at line 1 in C:\xampp\htdocs\php-fil-rouge\classes\Sql.php:24
+Stack trace:
+#0 C:\xampp\htdocs\php-fil-rouge\classes\Sql.php(24): PDO->exec('INSET INTO util...')
+#1 C:\xampp\htdocs\php-fil-rouge\classes\Utilisateur.php(67): Sql->inserer('INSET INTO util...')
+#2 C:\xampp\htdocs\php-fil-rouge\includes\inscription.inc.php(59): Utilisateur->inscrireUtilisateur()
+#3 C:\xampp\htdocs\php-fil-rouge\functions\inclusionIncFile.php(8): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php-fil-rouge\includes\main.php(34): inclusionIncFile('accueil')
+#5 C:\xampp\htdocs\php-fil-rouge\index.php(13): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSET INTO utilisateurs (nom,prenom,mail,password) VALUES ('JORDAN','Michael'...' at line 1 in C:\xampp\htdocs\php-fil-rouge\classes\Sql.php:24
+Stack trace:
+#0 C:\xampp\htdocs\php-fil-rouge\classes\Sql.php(24): PDO->exec('INSET INTO util...')
+#1 C:\xampp\htdocs\php-fil-rouge\classes\Utilisateur.php(67): Sql->inserer('INSET INTO util...')
+#2 C:\xampp\htdocs\php-fil-rouge\includes\inscription.inc.php(59): Utilisateur->inscrireUtilisateur()
+#3 C:\xampp\htdocs\php-fil-rouge\functions\inclusionIncFile.php(8): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php-fil-rouge\includes\main.php(34): inclusionIncFile('accueil')
+#5 C:\xampp\htdocs\php-fil-rouge\index.php(13): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'INSET INTO utilisateurs (nom,prenom,mail,password) VALUES ('JORDAN','Michael'...' at line 1 in C:\xampp\htdocs\php-fil-rouge\classes\Sql.php:24
+Stack trace:
+#0 C:\xampp\htdocs\php-fil-rouge\classes\Sql.php(24): PDO->exec('INSET INTO util...')
+#1 C:\xampp\htdocs\php-fil-rouge\classes\Utilisateur.php(67): Sql->inserer('INSET INTO util...')
+#2 C:\xampp\htdocs\php-fil-rouge\includes\inscription.inc.php(59): Utilisateur->inscrireUtilisateur()
+#3 C:\xampp\htdocs\php-fil-rouge\functions\inclusionIncFile.php(8): require('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\php-fil-rouge\includes\main.php(34): inclusionIncFile('accueil')
+#5 C:\xampp\htdocs\php-fil-rouge\index.php(13): require_once('C:\\xampp\\htdocs...')
+#6 {main}

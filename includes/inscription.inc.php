@@ -55,13 +55,8 @@ if(isset($_POST["frmInscription"]))
         include './includes/frmInscription.php';
     }
     else{
-
-            $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-            $requete = "INSERT INTO utilisateurs (id_utilisateur,nom,prenom,mail,password) VALUES (NULL,'$nom','$prenom','$mail','$passwordHash' );";
-
-            $queryInsert = new Sql();
-            $queryInsert->inserer($requete);
-
+        $user = new Utilisateur($mail, $password,$nom,$prenom);
+        $user->inscrireUtilisateur();
     }
 
 }

@@ -60,7 +60,7 @@ if(isset($_POST["frmInscription"]))
             $requete = "INSERT INTO utilisateurs (id_utilisateur,nom,prenom,mail,password) VALUES (NULL,'$nom','$prenom','$mail','$passwordHash' );";
 
             $queryInsert = new Sql();
-            $queryInsert->inserer($requete);
+            $queryInsert->editTable($requete);
 
     }
 

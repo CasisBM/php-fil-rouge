@@ -1,7 +1,7 @@
 <?php 
             $requete = "SELECT * FROM utilisateurs;";
             $queryInsert = new Sql();
-            $resultat = $queryInsert->select($requete) ;
+            $resultat = $queryInsert->showTable($requete) ;
 ?>
             <table>
         <tr>
